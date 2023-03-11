@@ -9,9 +9,10 @@
   "routes": [
     { "src": "/", "dest": "/" },
     { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/api/users", "dest": "/api/router.js" },
-    { "src": "/api/other", "dest": "/api/router2.js" },
-    { "src": "/api/another", "dest": "/api/anotherRouter.js" }
+    { "src": "/user-data", "dest": "/router/route.js" },
+    { "src": "/register", "dest": "/router/route.js" },
+    { "src": "/addData", "dest": "/router/route.js" },
+     { "src": "/login", "dest": "/router/router2.js" },
   ],
   "env": {
     "CONFIG": "$CONFIG"
