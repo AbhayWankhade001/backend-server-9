@@ -15,10 +15,5 @@
   ],
   "env": {
     "CONFIG": "$CONFIG"
-  },
-  "envSecrets": {
-    "CONFIG": {
-      "type": "json"
-    }
   }
 }
