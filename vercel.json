@@ -11,7 +11,7 @@
     },
     {
       "src": "route.js",
-      "des":"/router/route.js",
+      "dest": "/router/route.js",
       "use": "@vercel/node",
       "config": {
         "env": {
@@ -21,7 +21,7 @@
     },
     {
       "src": "router2.js",
-      "des":"/router/router2.js",
+      "dest": "/router/router2.js",
       "use": "@vercel/node",
       "config": {
         "env": {
