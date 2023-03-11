@@ -12,7 +12,7 @@
     { "src": "/user-data", "dest": "/router/route.js" },
     { "src": "/register", "dest": "/router/route.js" },
     { "src": "/addData", "dest": "/router/route.js" },
-     { "src": "/login", "dest": "/router/router2.js" },
+     { "src": "/login", "dest": "/router/router2.js" }
   ],
   "env": {
     "CONFIG": "$CONFIG"
