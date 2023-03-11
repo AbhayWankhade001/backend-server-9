@@ -1,18 +1,24 @@
 {
   "version": 2,
   "builds": [
-      {
-          "src": "./index.js",
-          "use": "@vercel/node"
-      }
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
-      {
-          "src": "/(.*)",
-          "dest": "/"
-      }, {
-          "src": "/login2",
-          "dest": "./router/router2.js"
-      }
-    ]
+    { "src": "/", "dest": "/" },
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/api/users", "dest": "/api/router.js" },
+    { "src": "/api/other", "dest": "/api/router2.js" },
+    { "src": "/api/another", "dest": "/api/anotherRouter.js" }
+  ],
+  "env": {
+    "CONFIG": "$CONFIG"
+  },
+  "envSecrets": {
+    "CONFIG": {
+      "type": "json"
+    }
+  }
 }
