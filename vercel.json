@@ -14,4 +14,4 @@
           "src": "/login2",
           "dest": "./router/router2.js"
       }
-  
+    ]
