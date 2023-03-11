@@ -1,41 +1,54 @@
 {
-    "version": 2,
-    "builds": [{ "src": "index.js", "use": "@now/node" }],
-    "routes": [
-      {
-        "src": "/login2",
-        "dest": "/router/router2.js",
-        "methods": ["GET"]
-      },
-      {
-        "src": "/protected",
-        "dest": "/router/router2.js",
-        "methods": ["GET"]
-      },
-      {
-        "src": "/register",
-        "dest": "/router/route.js",
-        "methods": ["POST"]
-      },
-      {
-        "src": "/user-data",
-        "dest": "/router/route.js",
-        "methods": ["GET"]
-      },
-      {
-        "src": "/resetPassword",
-        "dest": "/router/route.js",
-        "methods": ["POST"]
-      },
-      {
-        "src": "/addData",
-        "dest": "/router/route.js",
-        "methods": ["POST"]
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/index.js"
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node",
+      "config": {
+        "env": {
+          "NODE_ENV": "production"
+        }
       }
-    ]
-  }
-  
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/login2",
+      "dest": "./router/router2.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/protected",
+      "dest": "./router/router2.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/user-data",
+      "dest": "./router/route.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/register",
+      "dest": "./router/route.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/resetPassword",
+      "dest": "./router/route.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "http://localhost:8080/api/$1",
+      "headers": {
+        "host": "localhost:8080"
+      },
+      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
+    }
+  ]
+}
+
+
