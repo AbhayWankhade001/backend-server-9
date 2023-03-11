@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 import router2 from './router/router2.js';
 import "./router/config.js"
 const app = express();
+app.use(express.static('public'))
 
 /** middlewares */
 app.use(express.json());
