@@ -18,7 +18,7 @@ router.use(bodyParser.json());
 const port = process.env.PORT || 8080;
 
 // Add config variable declaration
-const config = process.env.CONFIG ? JSON.parse(Buffer.from(process.env.CONFIG, 'base64').toString('ascii')) : {};
+// const config = process.env.CONFIG ? JSON.parse(Buffer.from(process.env.CONFIG, 'base64').toString('ascii')) : {};
 
 /** Https get req */
 
