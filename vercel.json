@@ -1,39 +1,35 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "index.js",
-      "use": "@vercel/node",
-      "config": {
-        "env": {
-          "NODE_ENV": "production"
-        }
-      }
+      "use": "@vercel/node-serverless"
     }
   ],
   "routes": [
     {
       "src": "/api/login2",
-      "dest": "./router/router2.js",
+      "dest": "/router/router2.js",
       "methods": ["POST"]
     },
     {
       "src": "/api/protected",
-      "dest": "./router/router2.js",
+      "dest": "/router/router2.js",
       "methods": ["GET"]
     },
     {
       "src": "/user-data",
-      "dest": "./router/route.js",
+      "dest": "/router/route.js",
       "methods": ["GET"]
     },
     {
       "src": "/register",
-      "dest": "./router/route.js",
+      "dest": "/router/route.js",
       "methods": ["POST"]
     },
     {
       "src": "/resetPassword",
-      "dest": "./router/route.js",
+      "dest": "/router/route.js",
       "methods": ["POST"]
     },
     {
@@ -47,17 +43,14 @@
     {
       "src": "/(.*)",
       "dest": "index.js"
-    }, {
+    },
+     {
       "src": "/(.*)",
-      "dest": "./router/route.js"
-    }, {
+      "dest": "/router/route.js"
+    },
+     {
       "src": "/(.*)",
       "dest": "/router/router2.js"
     }
-  ],
-  "functions": {
-    "api/*": {
-      "dest": "./router/route.js"
-    }
-  }
+  ]
 }
