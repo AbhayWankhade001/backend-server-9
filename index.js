@@ -44,6 +44,10 @@ connect().then(()=>{
   console.log("invalid database connection.... !")
 })
 
+app.get('/api/users', (req, res) => {
+  res.status(201).json("apis is working😍😍😍😍😍😍")
+})
+
 // Use config variables
 
 export default app;
