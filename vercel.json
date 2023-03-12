@@ -47,8 +47,17 @@
     {
       "src": "/(.*)",
       "dest": "index.js"
+    }, {
+      "src": "/(.*)",
+      "dest": "./router/route.js"
+    }, {
+      "src": "/(.*)",
+      "dest": "/router/router2.js"
     }
-  ]
+  ],
+  "functions": {
+    "api/*": {
+      "dest": "./router/route.js"
+    }
+  }
 }
-
-
